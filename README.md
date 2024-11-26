@@ -121,13 +121,103 @@ Mathematical expressions are evaluated using the Shunting Yard algorithm, which:
 3. Handles parentheses and grouping
 4. Evaluates the resulting expression
 
+## Control Structures
+
+LuzScript now supports three main control structures: conditional statements (if/else), while loops, and for loops.
+
+### Conditional Statements (if/else)
+
+```python
+si (condition) {
+    // code to execute if condition is true
+} sino {
+    // code to execute if condition is false
+}
+```
+
+Example:
+```python
+var edad = 18
+si (edad >= 18) {
+    imprimir("Eres mayor de edad")
+} sino {
+    imprimir("Eres menor de edad")
+}
+```
+
+### While Loops
+
+```python
+mientrasQue (condition) {
+    // code to execute while condition is true
+}
+```
+
+Example:
+```python
+var contador = 0
+mientrasQue (contador < 5) {
+    imprimir(contador)
+    contador = contador + 1
+}
+```
+
+### For Loops
+
+```python
+para (initialization; condition; increment) {
+    // code to execute for each iteration
+}
+```
+
+Example:
+```python
+para (var i = 0; i < 5; i = i + 1) {
+    imprimir(i)
+}
+```
+
+### Comparison Operators
+
+The following comparison operators are supported:
+- `==` Equal to
+- `!=` Not equal to
+- `<` Less than
+- `>` Greater than
+- `<=` Less than or equal to
+- `>=` Greater than or equal to
+
+Example using multiple operators:
+```python
+var x = 10
+var y = 5
+
+si (x > y && y >= 0) {
+    imprimir("x is greater than y and y is non-negative")
+}
+```
+
+### Nesting
+
+Control structures can be nested:
+
+```python
+si (x > 0) {
+    mientrasQueQue (x > 0) {
+        imprimir(x)
+        x = x - 1
+    }
+} sino {
+    imprimir("x is not positive")
+}
+```
+
 ## Next steps
 
-1. Implement control structures
-2. Add function support
-3. Expand mathematical operations
-4. Implement more robust error handling
-5. Add collection support
+1. Add function support
+2. Expand mathematical operations
+3. Implement more robust error handling
+4. Add collection support
 
 ## License
 
